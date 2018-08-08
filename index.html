@@ -8,13 +8,19 @@
     <script src="js/FileSaver.js"></script>
     <script src="js/jhxlsx.js"></script>
     <script>
-        var data = [
-            {"styles": {title: {font: {bold: true}}, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": ["Report Name: Bhup-Data Insights Case Level Issues", "Report Generated: 7/6/2018"], "header": ["Name", "Position", "Office", "Age", "Start date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
-            {"styles": {title: null, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": null, "header": ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
+        var tableData = [
+            {"styles": {title: {font: {bold: true}}, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, title: ["Title 1", "Title 2"], header: ["Name", "Position", "Office", "Age", "Start date", "Salary"], subHeader: [["","","","5000","","$33333"]], body: [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
+            {"styles": {title: null, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, title: null, header: ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], body: [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
         ];
         function save() {
-            var options = {tableData: data};
-            Jhxlsx.export(data, options);
+            var options = {
+                fileName: "report",
+                sheetName: "Report",
+                header:true,
+                createEmptyRow:true,
+                maxCellWidth: 20
+            };
+            Jhxlsx.export(tableData, options);
         }
     </script>
     <style>
@@ -39,7 +45,7 @@
             </header>
 
             <div class="middle">
-                <button onclick="save()">Save</button>
+                <button onclick="save()">Export</button>
             </div>
             <footer>                
                 <p>Export xlsx jquery</p>

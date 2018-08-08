@@ -10,8 +10,6 @@ var Jhxlsx = {
         sheetName: "Report",
         fileFullName: "report.xlsx",
         header: true,
-        headerOthers: true,
-        createEmptyCells: true,
         createEmptyRow: true,
         maxCellWidth: 20
     },
@@ -109,13 +107,20 @@ var Jhxlsx = {
                     jh.jhAddRow([table.title[j]], table.styles.title, false);
                 }
             }
-            if (table.header) {
+            if (jh.config.header) {
                 jh.jhAddRow(table.header, table.styles.header, false);
+            }
+            if (table.subHeader) {
+                for (var j in table.subHeader) {
+                    jh.jhAddRow(table.subHeader[j], table.styles.header, true);
+                }
             }
             for (var j in table.body) {
                 jh.jhAddRow(table.body[j], table.styles.body, true);
             }
-            jh.rowCount++;
+            if (jh.config.createEmptyRow) {
+                jh.rowCount++;
+            }
         }
         this.cellWidthValidate();
         jh.ws['!merges'] = merges;
