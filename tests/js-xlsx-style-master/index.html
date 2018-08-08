@@ -1,0 +1,27 @@
+
+<!-- saved from url=(0039)http://sheetjs.com/demos/writexlsx.html -->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <script type="text/javascript" src="src/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="src/xlsx.core.min.js"></script>       
+        <script type="text/javascript" src="src/FileSaver.js"></script>
+        <script type="text/javascript" src="src/jhxlsx.js"></script>
+
+        <script>
+            var data = [
+                {"styles": {title: {font: {bold: true}}, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": ["Report Name: Bhup-Data Insights Case Level Issues", "Report Generated: 7/6/2018"], "header": ["Name", "Position", "Office", "Age", "Start date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
+                {"styles": {title: null, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": null, "header": ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
+            ];
+            function save() {
+                var options = {tableData: data};
+                Jhxlsx.export(options);
+            }
+
+        </script>
+
+
+    </head><body>
+        <div>Click the button below to save a sample excel file with minimal styles.</div>
+        <button onclick="save()">save</button>
+    </body></html>

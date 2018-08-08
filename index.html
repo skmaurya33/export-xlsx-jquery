@@ -1,33 +1,49 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jszip.min.js"></script>
-        <script src="js/jhxlsx.lib.js"></script>       
-        <style>
-        </style>
-    </head>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/xlsx.core.min.js"></script>       
+    <script src="js/FileSaver.js"></script>
+    <script src="js/jhxlsx.js"></script>
+    <script>
+        var data = [
+            {"styles": {title: {font: {bold: true}}, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": ["Report Name: Bhup-Data Insights Case Level Issues", "Report Generated: 7/6/2018"], "header": ["Name", "Position", "Office", "Age", "Start date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
+            {"styles": {title: null, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, "title": null, "header": ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
+        ];
+        function save() {
+            var options = {tableData: data};
+            Jhxlsx.export(data, options);
+        }
+    </script>
+    <style>
+        body{
+            background: #eee;
+        }
+        .container{
+            border:1px solid #ccc;
+            margin: 0 auto;
+            height: auto;
+            text-align: center;
+        }
+        .middle{
+            background: #bbb;
+            margin: 20px 0;
+        }
+    </style>
     <body>
-        <a id="xlxx" href="#">xlxx</a>
-        <div id="container">
+        <div class="container">
+            <header> 
+                <h1><b>Export xlsx jquery</b></h1>               
+            </header>
 
+            <div class="middle">
+                <button onclick="save()">Save</button>
+            </div>
+            <footer>                
+                <p>Export xlsx jquery</p>
+            </footer>
         </div>
-
-        <script>
-            $(document).ready(function () {
-                $('#xlxx').on('click', function () {
-                    var config = {
-                        filename: "aassss",
-                        sheetName: "Sheet1",
-                    };
-
-                    var data = [
-                        {"styles": {title: 17, messageTop: 0, messageBottom: 0, header: 22, footer: 0}, "title": ["Report Name: Bhup-Data Insights Case Level Issues", "Report Generated: 7/6/2018"], "messageTop": null, "messageBottom": null, "header": ["Name", "Position", "Office", "Age", "Start date", "Salary"], "footer": ["Name", "Position", "Office", "Age", "Start date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
-                        {"title": null, "messageTop": null, "messageBottom": null, "header": ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], "footer": ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], "body": [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
-                    ];
-                    generateXLSX(config, data);
-                });
-            });
-        </script>
     </body>
-
 </html>

@@ -1,76 +1,76 @@
 /*
  * 
-####################################################################################################
-Built in styles
-The following indexes are available form the styles that are predefined in the Editor XLSX style file. These indexes can be applied to any cells in the generated spreadsheet, altering their appearance.
-0 - Normal text
-1 - White text
-2 - Bold
-3 - Italic
-4 - Underline
-5 - Normal text, grey background
-6 - White text, grey background
-7 - Bold, grey background
-8 - Italic, grey background
-9 - Underline, grey background
-10 - Normal text, red background
-11 - White text, red background
-12 - Bold, red background
-13 - Italic, red background
-14 - Underline, red background
-15 - Normal text, green background
-16 - White text, green background
-17 - Bold, green background
-18 - Italic, green background
-19 - Underline, green background
-20 - Normal text, blue background
-21 - White text, blue background
-22 - Bold, blue background
-23 - Italic, blue background
-24 - Underline, blue background
-25 - Normal text, thin black border
-26 - White text, thin black border
-27 - Bold, thin black border
-28 - Italic, thin black border
-29 - Underline, thin black border
-30 - Normal text, grey background, thin black border
-31 - White text, grey background, thin black border
-32 - Bold, grey background, thin black border
-33 - Italic, grey background, thin black border
-34 - Underline, grey background, thin black border
-35 - Normal text, red background, thin black border
-36 - White text, red background, thin black border
-37 - Bold, red background, thin black border
-38 - Italic, red background, thin black border
-39 - Underline, red background, thin black border
-40 - Normal text, green background, thin black border
-41 - White text, green background, thin black border
-42 - Bold, green background, thin black border
-43 - Italic, green background, thin black border
-44 - Underline, green background, thin black border
-45 - Normal text, blue background, thin black border
-46 - White text, blue background, thin black border
-47 - Bold, blue background, thin black border
-48 - Italic, blue background, thin black border
-49 - Underline, blue background, thin black border
-50 - Left aligned text (since 1.2.2)
-51 - Centred text (since 1.2.2)
-52 - Right aligned text (since 1.2.2)
-53 - Justified text (since 1.2.2)
-54 - Text rotated 90° (since 1.2.2)
-55 - Wrapped text (since 1.2.2)
-56 - Percentage integer value (automatically detected and used by buttons - since 1.2.3)
-57 - Dollar currency values (automatically detected and used by buttons - since 1.2.3)
-58 - Pound currency values (automatically detected and used by buttons - since 1.2.3)
-59 - Euro currency values (automatically detected and used by buttons - since 1.2.3)
-60 - Percentage with 1 decimal place (automatically detected and used by buttons - since 1.2.3)
-61 - Negative numbers indicated by brackets (automatically detected and used by buttons - since 1.2.3)
-62 - Negative numbers indicated by brackets - 2 decimal places (automatically detected and used by buttons - since 1.2.3)
-63 - Numbers with thousand separators (automatically detected and used by buttons - since 1.2.3)
-64 - Numbers with thousand separators - 2 decimal places (automatically detected and used by buttons - since 1.2.3)
-65 - Numbers without thousand separators (automatically detected and used by buttons - since 1.2.4)
-66 - Numbers without thousand separators - 2 decimal places (automatically detected and used by buttons - since 1.2.4)
-####################################################################################################
+ ####################################################################################################
+ Built in styles
+ The following indexes are available form the styles that are predefined in the Editor XLSX style file. These indexes can be applied to any cells in the generated spreadsheet, altering their appearance.
+ 0 - Normal text
+ 1 - White text
+ 2 - Bold
+ 3 - Italic
+ 4 - Underline
+ 5 - Normal text, grey background
+ 6 - White text, grey background
+ 7 - Bold, grey background
+ 8 - Italic, grey background
+ 9 - Underline, grey background
+ 10 - Normal text, red background
+ 11 - White text, red background
+ 12 - Bold, red background
+ 13 - Italic, red background
+ 14 - Underline, red background
+ 15 - Normal text, green background
+ 16 - White text, green background
+ 17 - Bold, green background
+ 18 - Italic, green background
+ 19 - Underline, green background
+ 20 - Normal text, blue background
+ 21 - White text, blue background
+ 22 - Bold, blue background
+ 23 - Italic, blue background
+ 24 - Underline, blue background
+ 25 - Normal text, thin black border
+ 26 - White text, thin black border
+ 27 - Bold, thin black border
+ 28 - Italic, thin black border
+ 29 - Underline, thin black border
+ 30 - Normal text, grey background, thin black border
+ 31 - White text, grey background, thin black border
+ 32 - Bold, grey background, thin black border
+ 33 - Italic, grey background, thin black border
+ 34 - Underline, grey background, thin black border
+ 35 - Normal text, red background, thin black border
+ 36 - White text, red background, thin black border
+ 37 - Bold, red background, thin black border
+ 38 - Italic, red background, thin black border
+ 39 - Underline, red background, thin black border
+ 40 - Normal text, green background, thin black border
+ 41 - White text, green background, thin black border
+ 42 - Bold, green background, thin black border
+ 43 - Italic, green background, thin black border
+ 44 - Underline, green background, thin black border
+ 45 - Normal text, blue background, thin black border
+ 46 - White text, blue background, thin black border
+ 47 - Bold, blue background, thin black border
+ 48 - Italic, blue background, thin black border
+ 49 - Underline, blue background, thin black border
+ 50 - Left aligned text (since 1.2.2)
+ 51 - Centred text (since 1.2.2)
+ 52 - Right aligned text (since 1.2.2)
+ 53 - Justified text (since 1.2.2)
+ 54 - Text rotated 90° (since 1.2.2)
+ 55 - Wrapped text (since 1.2.2)
+ 56 - Percentage integer value (automatically detected and used by buttons - since 1.2.3)
+ 57 - Dollar currency values (automatically detected and used by buttons - since 1.2.3)
+ 58 - Pound currency values (automatically detected and used by buttons - since 1.2.3)
+ 59 - Euro currency values (automatically detected and used by buttons - since 1.2.3)
+ 60 - Percentage with 1 decimal place (automatically detected and used by buttons - since 1.2.3)
+ 61 - Negative numbers indicated by brackets (automatically detected and used by buttons - since 1.2.3)
+ 62 - Negative numbers indicated by brackets - 2 decimal places (automatically detected and used by buttons - since 1.2.3)
+ 63 - Numbers with thousand separators (automatically detected and used by buttons - since 1.2.3)
+ 64 - Numbers with thousand separators - 2 decimal places (automatically detected and used by buttons - since 1.2.3)
+ 65 - Numbers without thousand separators (automatically detected and used by buttons - since 1.2.4)
+ 66 - Numbers without thousand separators - 2 decimal places (automatically detected and used by buttons - since 1.2.4)
+ ####################################################################################################
  * 
  * https://datatables.net/reference/button/excelHtml5
  */
@@ -700,7 +700,7 @@ var _saveAs = (function (view) {
 
 function skm_gs(table, key) {
     var style = (key == 'header' || key == 'footer') ? 7 : 0;
-     if (table.hasOwnProperty('styles') && table.styles !=null && table.styles.hasOwnProperty(key)) {
+    if (table.hasOwnProperty('styles') && table.styles != null && table.styles.hasOwnProperty(key)) {
         style = table.styles[key];
     }
     return style;
@@ -755,7 +755,7 @@ function generateXLSX(config2, tableData) {
     };
 
     var config = Object.assign(config1, config2);
-
+    config['filename'] = config.filename + config.extension;
     var rowPos = 0;
     var getXml = function (type) {
         var str = excelStrings[ type ];
