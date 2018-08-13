@@ -19,6 +19,7 @@ var Jhxlsx = {
     ws: {},
     range: {s: {c: 10000000, r: 10000000}, e: {c: 0, r: 0}},
     init: function (tableData, options) {
+        this.reset();
         this.tableData = tableData;
         for (var key in this.config) {
             if (options.hasOwnProperty(key)) {
@@ -26,6 +27,12 @@ var Jhxlsx = {
             }
         }
         this.config['fileFullName'] = this.config.fileName + this.config.extension;
+    },
+    reset: function () {
+        this.tableData = [];
+        this.rowCount = 0;
+        this.wscols = [];
+        this.ws = {};
     },
     cellWidth: function (cellText, pos) {
         var max = (cellText.length * 1.3);
