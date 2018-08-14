@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <title>JHXLSX Export Library</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/xlsx.core.min.js"></script>       
+    <script src="js/FileSaver.js"></script>
+    <script src="js/jhxlsx.js"></script>
+    <script>
+        var tableData = [
+            {"styles": {title: {font: {bold: true}}, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, title: ["Title 1", "Title 2"], header: ["Name", "Position", "Office", "Age", "Start date", "Salary"], subHeader: [["","","","5000","","$33333"]], body: [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "$115,000"]]},
+            {"styles": {title: null, header: {fill: {fgColor: {rgb: "5084A5"}}}, body: null}, title: null, header: ["Name", "Position", "Office", "Age", "Start date", "Address", "End date", "Salary"], body: [["Ashton Cox", "Junior Technical Author", "San Francisco", "66", "2009/01/12", "66", "2009/01/12", "$86,000"], ["Thor Walton", "Developer", "New York", "61", "2013/08/11", "66", "2009/01/12", "$98,540"], ["Tiger Nixon", "System Architect", "Edinburgh", "61", "2011/04/25", "66", "2009/01/12", "$320,800"], ["Zenaida Frank", "Software Engineer", "New York", "63", "2010/01/04", "66", "2009/01/12", "$125,250"], ["Zorita Serrano", "Software Engineer", "San Francisco", "56", "2012/06/01", "66", "2009/01/12", "$115,000"]]},
+        ];
+        function save() {
+            var options = {
+                fileName: "report",
+                sheetName: "Report",
+                header:true,
+                createEmptyRow:true,
+                maxCellWidth: 20
+            };
+            Jhxlsx.export(tableData, options);
+        }
+    </script>
+    <style>
+        body{
+            background: #eee;
+        }
+        .container{
+            border:1px solid #ccc;
+            margin: 0 auto;
+            height: auto;
+            text-align: center;
+        }
+        .middle{
+            background: #bbb;
+            margin: 20px 0;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <header> 
+                <h1><b>Export xlsx jquery</b></h1>               
+            </header>
+
+            <div class="middle">
+                <button onclick="save()">Export</button>
+            </div>
+            <footer>                
+                <p>Export xlsx jquery</p>
+            </footer>
+        </div>
+    </body>
+</html>
