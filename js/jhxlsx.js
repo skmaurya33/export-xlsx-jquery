@@ -5,15 +5,13 @@
  */
 var Jhxlsx = {
     config: {
-        fileName: "report",
+        fileName: "jhreport",
         extension: ".xlsx",
         sheetName: "Sheet",
         fileFullName: "report.xlsx",
         header: true,
-        createEmptyRow: true,
         maxCellWidth: 20
     },
-    //workbookObj: [],
     worksheetObj: {},
     rowCount: 0,
     wsColswidth: [],
@@ -22,21 +20,12 @@ var Jhxlsx = {
     range: {s: {c: 10000000, r: 10000000}, e: {c: 0, r: 0}},
     init: function (options) {
         this.reset();
-        //this.workbookObj = workbookObj;
         for (var key in this.config) {
             if (options.hasOwnProperty(key)) {
                 this.config[key] = options[key];
             }
         }
         this.config['fileFullName'] = this.config.fileName + this.config.extension;
-    },
-    clear: function () {
-        //this.workbookObj = [];
-        this.worksheetObj = {};
-        this.rowCount = 0;
-        this.wsColswidth = [];
-        this.merges = [];
-        this.worksheet = {};
     },
     reset: function () {
         this.worksheetObj = {};
@@ -67,6 +56,19 @@ var Jhxlsx = {
             v += 1462;
         var epoch = Date.parse(v);
         return (epoch - new Date(Date.UTC(1899, 11, 30))) / (24 * 60 * 60 * 1000);
+    },
+    setCellDataType: function (cell) {
+        if (typeof cell.v === 'number') {
+            cell.t = 'n';
+        } else if (typeof cell.v === 'boolean') {
+            cell.t = 'b';
+        } else if (cell.v instanceof Date) {
+            cell.t = 'n';
+            cell.z = XLSX.SSF._table[14];
+            cell.v = this.datenum(cell.v);
+        } else {
+            cell.t = 's';
+        }
     },
     jhAddRow: function (rowObj) {
 
@@ -99,17 +101,18 @@ var Jhxlsx = {
             if (cell.v === null)
                 continue;
             var cell_ref = XLSX.utils.encode_cell({c: c, r: this.rowCount});
-            if (typeof cell.v === 'number') {
-                cell.t = 'n';
-            } else if (typeof cell.v === 'boolean') {
-                cell.t = 'b';
-            } else if (cell.v instanceof Date) {
-                cell.t = 'n';
-                cell.z = XLSX.SSF._table[14];
-                cell.v = this.datenum(cell.v);
-            } else {
-                cell.t = 's';
-            }
+            this.setCellDataType(cell);
+            /*if (typeof cell.v === 'number') {
+             cell.t = 'n';
+             } else if (typeof cell.v === 'boolean') {
+             cell.t = 'b';
+             } else if (cell.v instanceof Date) {
+             cell.t = 'n';
+             cell.z = XLSX.SSF._table[14];
+             cell.v = this.datenum(cell.v);
+             } else {
+             cell.t = 's';
+             }*/
             if (cellObj.hasOwnProperty('style')) {
                 cell.s = cellObj.style;
             }
