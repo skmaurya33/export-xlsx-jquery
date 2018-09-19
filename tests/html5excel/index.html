@@ -28,11 +28,28 @@
             </header>
 
             <div class="middle">
-                <a href="">ssss</a>
+                <a href="#" onclick="downloadXlsx()">ssss</a>
             </div>
             <footer>                
                 <p>Export xlsx jquery</p>
             </footer>
         </div>
+        <script>
+            //var dataTableStrForExcel;
+            var config = {};
+            var tableData = [
+                {
+                    title: ["Suraj"],
+                    header: ["text", "h1"],
+                    body: [["body", "body"]]
+                }
+            ];
+            function downloadXlsx() {
+
+                dataTableStrForExcel = generateXLSX(config, tableData);
+            }
+            //downloadXlsx();
+
+        </script>        
     </body>
 </html>

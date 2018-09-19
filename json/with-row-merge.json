@@ -1,0 +1,89 @@
+{
+    "options": {
+        "fileName": "Report"
+    },
+    "tableData": [
+        {
+            "sheetName": "Sheet1",
+            "data": [
+                [
+                    {
+                        "merge": {
+                            "c": 8
+                        },
+                        "style": {
+                            "font": {
+                                "bold": true
+                            }
+                        },
+                        "text": "MIS - CLIENT SERVICING"
+                    }
+                ],
+                [],
+                [
+                    {
+                        "text": "DATE",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "text": "CLIENT",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "text": "PROJECT NAME",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        },
+                        "text": "CS REPRESENTATIVE"
+                    },
+                    {
+                        "merge": {
+                            "c": 2,
+                            "r": 0
+                        },
+                        "text": "FIRST MEETING ATTENDED BY"
+                    },
+                    {},
+                    {},                    
+                    {
+                        "merge": {
+                            "c": 1,
+                            "r": 1
+                        },
+                        "text": "MEETING TYPE"
+                    },
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        },
+                        "text": "PROJECT TYPE (EVENT / RETAIL / ACTIVATION / EXHIBITION / AV / DESIGNS)"
+                    },
+                    {
+                        "merge": {
+                            "c": 2,
+                            "r": 0
+                        },
+                        "text": "PROJECT MANAGEMENT"
+                    },
+                    {},
+                    {}
+                ]                                               
+            ]
+        }
+    ]
+}

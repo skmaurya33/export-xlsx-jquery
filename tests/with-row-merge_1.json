@@ -1,0 +1,576 @@
+{
+    "options": {
+        "fileName": "Report"
+    },
+    "tableData": [
+        {
+            "sheetName": "Sheet1",
+            "data": [
+                [
+                    {
+                        "merge": {
+                            "c": 5
+                        },
+                        "style": {
+                            "font": {
+                                "bold": true
+                            }
+                        },
+                        "text": "MIS - CLIENT SERVICING"
+                    }
+                ],
+                [],
+                [
+                    {
+                        "text": "DATE",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "text": "CLIENT",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "text": "PROJECT NAME",
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        }
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        },
+                        "text": "CS REPRESENTATIVE"
+                    },
+                    {
+                        "merge": {
+                            "c": 2,
+                            "r": 0
+                        },
+                        "text": "FIRST MEETING ATTENDED BY"
+                    },
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 1,
+                            "r": 1
+                        },
+                        "text": "MEETING TYPE"
+                    },
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 3
+                        },
+                        "text": "PROJECT TYPE (EVENT / RETAIL / ACTIVATION / EXHIBITION / AV / DESIGNS)"
+                    },
+                    {
+                        "merge": {
+                            "c": 43,
+                            "r": 0
+                        },
+                        "text": "PROJECT MANAGEMENT"
+                    }
+                ],
+                [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 2
+                        },
+                        "text": "FIRST MEETING DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 2
+                        },
+                        "text": "FPR - CS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 2
+                        },
+                        "text": "OTHERS"
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "MOM - CLIENT BRIEF / ITERATIONS - CLIENT"
+                    },
+                    {
+                        "merge": {
+                            "c": 1,
+                            "r": 0
+                        },
+                        "text": "CLIENT BRIEF/REWORK -"
+                    },
+                    {},
+                    {
+                        "text": "MOM - ITERATIONS - INTERNAL TEAM - OPS & CREATIVES"
+                    },
+                    {
+                        "merge": {
+                            "c": 2,
+                            "r": 0
+                        },
+                        "text": "PRE-LIMINARY DISCUSSION / REWORK - "
+                    },
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 3,
+                            "r": 0
+                        },
+                        "text": "BRAIN STORMING DISCUSSION -"
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 3,
+                            "r": 0
+                        },
+                        "text": "PRE-PITCH MEETING"
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "INITIAL GM"
+                    },
+                    {
+                        "text": "PRESENTATION & FEEDBACK"
+                    },
+                    {
+                        "text": "CLIENT APPROVAL / REJECTION"
+                    },
+                    {
+                        "text": "OPS NOTE / ELEMENT LIST - TO BE SHARED WITH CREATIVE & OPS - BEFORE PPM"
+                    },
+                    {
+                        "text": "PROJECT PLANNING MEETING"
+                    },
+                    {
+                        "text": "UPDATES TO CLIENT - MINIMUM 5 UPDATES"
+                    },
+                    {
+                        "text": "PROJECT CLOSURE"
+                    },
+                    {
+                        "merge":{
+                        "c":4
+                        },
+                        "text": "Timely Submission of Expense Sheet-Submission of Expense sheet with all the vouchers and vendor bills within 3 days for local & 7 days (Outstation) from the activity completion."
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "merge":{
+                        "c":3
+                        },
+                        "text": "CLIENT PO, ADVANCES, BILLING & COLLECTIONS"
+                    }
+                ],
+                [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "BRIEF/ CREDENTIALS"
+                    },
+                    {
+                        "text": "IF CREDENTIALS, DATE &  OF MOM SENT"
+                    },
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE ON CLIENT BRIEF/ REWORK RECD"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DEAD LINE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Scheduled DATE ON  PRE-LIMINARY DISCUSSION WITH CREATIVE & OPS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Actaul DATE ON  PRE-LIMINARY DISCUSSION WITH CREATIVE & OPS"
+                    },
+                    {
+                        "text": "TOTAL TIME TAKEN"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Scheduled DATE ON BRAIN STORMING DISCUSSION WITH CREATIVE & OPS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Actual DATE ON BRAIN STORMING DISCUSSION WITH CREATIVE & OPS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "SESSION ATTENDED BY"
+                    },
+                    {
+                        "text": "TOTAL TIME TAKEN"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Scheduled DATE"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Actual Date"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "MEETING ATTENDED BY"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "NAME OF CS - REPRESENTATIVE PRESENTING"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "ACE"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "PITCH ICE"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "GM"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "GM %"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "Special Approva BY If Required"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE ON PRESENTATION TO CLIENT"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "PRESENTATION SENT OVER EMAIL - DATE"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "FEEDBACK REMARKS"
+                    }, {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE OF APPROVAL/REJECTION"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "APPROVED COST - AS PER PO VALUE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "FEEDBACK REMARKS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "MEETING ATTENDED BY"
+                    },
+                    {
+                        "text": "DATE &  FOR UPDATES"
+                    },
+                    {
+                        "merge": {
+                            "c": 2,
+                            "r": 0
+                        },
+                        "text": "CLIENT FEEDBACK"
+                    },
+                    {},
+                    {},
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "PROJECT CLOSURE DATE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE OF THANK U EMAIL SENT TO CLIENT - WITHIN 48 HOURS"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE ON SUBMISSION OF FINAL REPORT. AV, PPT, PICS - WITH IN 7 DAYS"
+                    },
+                    {
+                        "text": "Timley Clearance of Imprest Accounts-Imprest to be submitted within 2 Days from the IR recd for local Projects & within 7 Days for the outstation project."
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE OF SUBMISSION OF EXPENSE SHEET"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "TOTAL ICE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "ADD. ICE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "TOTAL WITH ADD ICE"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "TOTAL OF EXPENSES"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "START DATE OF ACTIVITY"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE OF PO OR CLIENT APPROVAL RECD, CLIENT APPROVAL, PO SHOULD COME ON OR BEFORE START OF THE ACTIVITY"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "LAST DATE OF ACTIVITY"
+                    },
+                    {
+                        "merge": {
+                            "c": 0,
+                            "r": 1
+                        },
+                        "text": "DATE OF BILLING - SHOULD BE DONE WITHIN 7 DAY DAYS FROM CLOSURE"
+                    }
+                ],
+                [
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "DATE"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "DAYS"
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "DAYS"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "DATE"
+                    },
+                    {
+                        "text": "RECD - YES / NO"
+                    },
+                    {
+                        "text": "DATE OF FEEDBACK FORM RECD"
+                    },
+                    {
+                        "text": "SCORE - 1-5"
+                    },
+                    {},
+                    {},
+                    {},
+                    {
+                        "text": "DATE OF LAST SUBMITTED IMPREST"
+                    },
+                    {
+                        "text": "TOTAL IMPREST SUBMITTED"
+                    },
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {},
+                    {}
+                ]
+            ]
+        }
+    ]
+}

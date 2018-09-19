@@ -8,7 +8,9 @@
       "data": [
         [
           {
-            "merge": "0-5",
+            "merge": {
+                            "c": 4
+                        },
             "style": {
               "font": {
                 "bold": true
@@ -19,7 +21,9 @@
         ],
         [
           {
-            "merge": "0-5",
+            "merge": {
+                            "c": 4
+                        },
             "style": {
               "font": {
                 "bold": true
@@ -505,7 +509,9 @@
       "data": [
         [
           {
-            "merge": "0-5",
+            "merge": {
+                            "c": 4
+                        },
             "style": {
               "font": {
                 "bold": true
@@ -516,7 +522,9 @@
         ],
         [
           {
-            "merge": "0-5",
+            "merge": {
+                            "c": 4
+                        },
             "style": {
               "font": {
                 "bold": true

@@ -5,11 +5,12 @@
  */
 var Jhxlsx = {
     config: {
-        fileName: "jhreport",
+        fileName: "report",
         extension: ".xlsx",
         sheetName: "Sheet",
         fileFullName: "report.xlsx",
         header: true,
+        createEmptyRow: true,
         maxCellWidth: 20
     },
     worksheetObj: {},
@@ -17,25 +18,33 @@ var Jhxlsx = {
     wsColswidth: [],
     merges: [],
     worksheet: {},
-    range: {s: {c: 10000000, r: 10000000}, e: {c: 0, r: 0}},
+    range: {},
     init: function (options) {
         this.reset();
-        for (var key in this.config) {
-            if (options.hasOwnProperty(key)) {
-                this.config[key] = options[key];
+        if (options) {
+            for (var key in this.config) {
+                if (options.hasOwnProperty(key)) {
+                    this.config[key] = options[key];
+                }
             }
         }
         this.config['fileFullName'] = this.config.fileName + this.config.extension;
     },
     reset: function () {
+        this.range = {s: {c: 10000000, r: 10000000}, e: {c: 0, r: 0}};
         this.worksheetObj = {};
         this.rowCount = 0;
         this.wsColswidth = [];
         this.merges = [];
         this.worksheet = {};
     },
+    parse2Int0: function (num) {
+        num = parseInt(num);
+        num = Number.isNaN(num) ? 0 : num;
+        return num;
+    },
     cellWidth: function (cellText, pos) {
-        var max = (cellText.length * 1.3);
+        var max = (cellText && cellText.length * 1.3);
         if (this.wsColswidth[pos]) {
             if (max > this.wsColswidth[pos].wch) {
                 this.wsColswidth[pos] = {wch: max};
@@ -71,8 +80,8 @@ var Jhxlsx = {
         }
     },
     jhAddRow: function (rowObj) {
-
         for (var c in rowObj) {
+            c = this.parse2Int0(c);
             var cellObj = rowObj[c];
             if (this.range.s.r > this.rowCount)
                 this.range.s.r = this.rowCount;
@@ -91,9 +100,20 @@ var Jhxlsx = {
 
             var calColWidth = true;
             if (cellObj.hasOwnProperty('merge')) {
+                var mergeObj = cellObj.merge;
                 calColWidth = false;
-                var colStartEnd = cellObj.merge.split('-');
-                this.merges.push({s: {r: this.rowCount, c: parseInt(colStartEnd[0])}, e: {r: this.rowCount, c: parseInt(colStartEnd[1])}});
+                //var colStartEnd = cellObj.merge.split('-');
+                var ec = c;
+                var er = this.rowCount;
+                if (mergeObj.hasOwnProperty('c')) {
+                    ec = (c + parseInt(mergeObj.c));
+                }
+                if (mergeObj.hasOwnProperty('r')) {
+                    er = (this.rowCount + parseInt(mergeObj.r));
+                }
+
+                this.merges.push({s: {r: this.rowCount, c: c}, e: {r: er, c: ec}});
+                //this.merges.push({s: {r: this.rowCount, c: c}, e: {r: (this.rowCount + 1), c: (c + 2)}});
             }
             if (calColWidth) {
                 this.cellWidth(cell.v, c);
@@ -102,17 +122,7 @@ var Jhxlsx = {
                 continue;
             var cell_ref = XLSX.utils.encode_cell({c: c, r: this.rowCount});
             this.setCellDataType(cell);
-            /*if (typeof cell.v === 'number') {
-             cell.t = 'n';
-             } else if (typeof cell.v === 'boolean') {
-             cell.t = 'b';
-             } else if (cell.v instanceof Date) {
-             cell.t = 'n';
-             cell.z = XLSX.SSF._table[14];
-             cell.v = this.datenum(cell.v);
-             } else {
-             cell.t = 's';
-             }*/
+
             if (cellObj.hasOwnProperty('style')) {
                 cell.s = cellObj.style;
             }
@@ -125,8 +135,9 @@ var Jhxlsx = {
         for (var i in this.worksheetObj.data) {
             this.jhAddRow(this.worksheetObj.data[i]);
         }
-
         this.cellWidthValidate();
+        //console.log(this.merges);
+        //this.worksheet['!merges'] = [{s: {r: 0, c: 0}, e: {r: 0, c: 4}},{s: {r: 5, c: 0}, e: {r: 6, c: 3}}];//this.merges;
         this.worksheet['!merges'] = this.merges;
         this.worksheet['!cols'] = this.wsColswidth;
         if (this.range.s.c < 10000000)
@@ -140,7 +151,7 @@ var Jhxlsx = {
             view[i] = s.charCodeAt(i) & 0xFF;
         return buf;
     },
-    export: function (workbookObj, options) {
+    getBlob: function (workbookObj, options) {
         this.init(options);
         var workbook = new Workbook();
         /* add worksheet to workbook */
@@ -156,8 +167,12 @@ var Jhxlsx = {
             workbook.Sheets[sheetName] = this.worksheet;
         }
         var wbout = XLSX.write(workbook, {bookType: 'xlsx', bookSST: true, type: 'binary'});
-        saveAs(new Blob([this.s2ab(wbout)], {type: "application/octet-stream"}), this.config.fileFullName)
-    }
+        var blobData = new Blob([this.s2ab(wbout)], {type: "application/octet-stream"});
+        return blobData;
+    },
+    export: function (workbookObj, options) {
+        saveAs(this.getBlob(workbookObj, options), this.config.fileFullName);
+    },
 }
 
 function Workbook() {
