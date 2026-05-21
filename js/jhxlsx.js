@@ -42,6 +42,11 @@ var Jhxlsx = {
         num = parseInt(num);
         num = Number.isNaN(num) ? 0 : num;
         return num;
+    }, 
+	parse2IntNum: function (num) {
+        var no = parseInt(num);
+        num = isNaN(no) ? num : no;
+        return num;
     },
     cellWidth: function (cellText, pos) {
         var max = (cellText && cellText.length * 1.3);
